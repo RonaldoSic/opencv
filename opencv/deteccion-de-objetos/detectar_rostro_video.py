@@ -5,12 +5,10 @@ import matplotlib.pyplot as plt
 import os
 
 # Archivo donde esta las caracteristicas de las caras
-# caracteristicas_cara_xml = 'C:/Users/User/Documents/Mi Escritorio/PROGRAMAS/Programas Python/OpenCV/haarcascade_frontalface_default.xml'
-# Archivo donde esta las caracteristicas de los ojos en xml
-# caracteristicas_ojos_xml = 'C:/Users/User/Documents/Mi Escritorio/PROGRAMAS/Programas Python/OpenCV/haarcascade_eye.xml'
-
 caracteristicas_cara_xml = os.getcwd()+'/haarcascade_frontalface_default.xml'
+# Archivo donde esta las caracteristicas de los ojos en xml
 caracteristicas_ojos_xml = os.getcwd()+'/haarcascade_eye.xml' 
+
 # Cargamaos las caracteristicas para que se detecte una cara frontal
 cascada_cara = cv.CascadeClassifier(caracteristicas_cara_xml)
 # cargamos las caracteristicas para que se detecten los ojo en una cara
