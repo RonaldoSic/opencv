@@ -451,7 +451,7 @@ def ReconocerBotellas():
     cv2.waitKey(0)
 
 
-# CargaImgSimple()
+CargaImgSimple()
 # LeerWebCam()
 # ImagensConProcesamiento()
 # ResizeImage()

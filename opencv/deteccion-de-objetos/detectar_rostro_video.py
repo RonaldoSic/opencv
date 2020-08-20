@@ -2,12 +2,15 @@
 import cv2 as cv
 import numpy as np
 import matplotlib.pyplot as plt
+import os
 
 # Archivo donde esta las caracteristicas de las caras
-caracteristicas_cara_xml = 'C:/Users/User/Documents/Mi Escritorio/PROGRAMAS/Programas Python/OpenCV/haarcascade_frontalface_default.xml'
+# caracteristicas_cara_xml = 'C:/Users/User/Documents/Mi Escritorio/PROGRAMAS/Programas Python/OpenCV/haarcascade_frontalface_default.xml'
 # Archivo donde esta las caracteristicas de los ojos en xml
-caracteristicas_ojos_xml = 'C:/Users/User/Documents/Mi Escritorio/PROGRAMAS/Programas Python/OpenCV/haarcascade_eye.xml'
+# caracteristicas_ojos_xml = 'C:/Users/User/Documents/Mi Escritorio/PROGRAMAS/Programas Python/OpenCV/haarcascade_eye.xml'
 
+caracteristicas_cara_xml = os.getcwd()+'/haarcascade_frontalface_default.xml'
+caracteristicas_ojos_xml = os.getcwd()+'/haarcascade_eye.xml' 
 # Cargamaos las caracteristicas para que se detecte una cara frontal
 cascada_cara = cv.CascadeClassifier(caracteristicas_cara_xml)
 # cargamos las caracteristicas para que se detecten los ojo en una cara
@@ -36,10 +39,10 @@ def detectar_ojos (imagen):
 
 
 # Campturamos la imagen de la video camara
-captura = cv.VideoCapture(1)
+captura = cv.VideoCapture(0)
 
 while True:
-    res, video = captura.read(0)
+    res, video = captura.read()
     # Cargamos la funcion de detectar caras al video
     video = detectar_cara(video)
     video = detectar_ojos(video)

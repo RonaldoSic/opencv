@@ -2,8 +2,9 @@
 import numpy as np
 import cv2
 import matplotlib.pyplot as plt
+import os
 # Cargamos la imgen o la ruta
-face_woman = 'C:/Users/User/Documents/Mi Escritorio/PROGRAMAS/Programas Python/OpenCV/adolescence-face.jpg'
+face_woman = os.getcwd()+'/adolescence-face.jpg'
 
 # leemos la imagen 
 imagen = cv2.imread(face_woman)
@@ -25,3 +26,4 @@ plt.show()
 # Mostramos la imagen 
 plt.imshow(imagen)
 plt.show()
+print("Successful")
