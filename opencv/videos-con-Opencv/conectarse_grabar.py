@@ -1,7 +1,7 @@
 # Conectarse a la camara y grabar video
 import cv2
 # Creamos la variable que haara la captura del vido
-captura = cv2.VideoCapture(0)
+captura = cv2.VideoCapture(1)
 # capturamos y asignamos el ancho y el alto del video
 ancho = int(captura.get(cv2.CAP_PROP_FRAME_WIDTH))
 altura = int(captura.get(cv2.CAP_PROP_FRAME_HEIGHT))
