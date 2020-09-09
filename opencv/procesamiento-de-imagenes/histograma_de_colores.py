@@ -2,8 +2,8 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import cv2
-
-woman_light = 'C:/Users/User/Documents/Mi Escritorio/PROGRAMAS/Programas Python/OpenCV/adolescence.jpg'
+import os
+woman_light = os.getcwd()+'/adolescence.jpg'
 imagen_mujer = cv2.imread(woman_light)
 imagen_mujer = cv2.cvtColor(imagen_mujer, cv2.COLOR_BGR2RGB)
 print('Foma de la imagen {}'.format(imagen_mujer.shape))

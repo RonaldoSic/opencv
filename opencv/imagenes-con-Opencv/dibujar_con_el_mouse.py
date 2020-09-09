@@ -23,7 +23,3 @@ while True:
     
 # Al finalizar el bucle se cierran las ventas 
 cv2.destroyAllWindows()
-
-
-
-

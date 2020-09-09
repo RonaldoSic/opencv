@@ -2,15 +2,16 @@
 import cv2
 import matplotlib.pyplot as plt
 import numpy as np
+import os
 
 # Archivo donde esta las caracteristicas de las caras
-caracteristicas_cara_xml = 'C:/Users/User/Documents/Mi Escritorio/PROGRAMAS/Programas Python/OpenCV/haarcascade_frontalface_default.xml'
+caracteristicas_cara_xml = os.getcwd()+'/haarcascade_frontalface_default.xml'
 # Archivo donde esta las caracteristicas de los ojos en xml
-caracteristicas_ojos_xml = 'C:/Users/User/Documents/Mi Escritorio/PROGRAMAS/Programas Python/OpenCV/haarcascade_eye.xml'
+caracteristicas_ojos_xml = os.getcwd()+'/haarcascade_eye.xml'
 
 # Cargamos las imagenes que se utilizan
-woman = 'C:/Users/User/Documents/Mi Escritorio/PROGRAMAS/Programas Python/OpenCV/adolescence.jpg'
-family = 'C:/Users/User/Documents/Mi Escritorio/PROGRAMAS/Programas Python/OpenCV/family.jpg'
+woman = os.getcwd()+'/adolescence.jpg'
+family = os.getcwd()+'/family.jpg'
 # Se leen las imagenes en escala de grises
 imagen_mujer = cv2.imread(woman)
 imagen_familia = cv2.imread(family)
@@ -64,8 +65,6 @@ result_ojos = detectar_ojos(imagen_familia)
 result_ojos = cv2.cvtColor(result_ojos, cv2.COLOR_BGR2RGB)
 plt.imshow(result_ojos)
 plt.show()
-
-
 
 # imagen con 1 rotstro 
 # plt.imshow(imagen_mujer, cmap='gray')

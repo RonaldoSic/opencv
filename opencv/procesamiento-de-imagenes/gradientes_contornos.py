@@ -2,8 +2,9 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import cv2
+import os
 # url de la imagen que se quiere cargar
-sodoku = 'C:/Users/User/Documents/Mi Escritorio/PROGRAMAS/Programas Python/OpenCV/sudoku.jpg'
+sodoku = os.getcwd()+'/sudoku.jpg'
 # Lectura de la imagen con cv2
 imgen = cv2.imread(sodoku, 0)
 

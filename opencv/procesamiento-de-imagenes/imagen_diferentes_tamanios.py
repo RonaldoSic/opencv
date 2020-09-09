@@ -1,8 +1,9 @@
 # Mostrar imagen en diferentes tamanios en pantalla
 import matplotlib.pyplot as plt
 import cv2
+import os
 # url de la imagen que se quiere cargar
-woman_sun_flowers = 'C:/Users/User/Documents/Mi Escritorio/PROGRAMAS/Programas Python/OpenCV/woman.jpg'
+woman_sun_flowers = os.getcwd()+'/woman.jpg'
 # Lectura de la imagen con cv2
 imagen_mujer = cv2.imread(woman_sun_flowers)
 # Cambiamos los paramentros de colores de la imagen despues de su lectura

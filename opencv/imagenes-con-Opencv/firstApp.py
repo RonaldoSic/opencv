@@ -2,9 +2,9 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import cv2
-
-ruta_imagen = 'C:/Users/User/Documents/Mi Escritorio/PROGRAMAS/Programas Python/OpenCV/numpy-e-imagenes/mountain.jpg'
-img_woman_ruta = 'C:/Users/User/Documents/Mi Escritorio/PROGRAMAS/Programas Python/OpenCV/woman.jpg'
+import os
+ruta_imagen = os.getcwd()+'/mountain.jpg'
+img_woman_ruta = os.getcwd()+'/woman.jpg'
 # Leeemos el fichero 
 imagen = cv2.imread(img_woman_ruta)
 tipo_variable = type(imagen)

@@ -2,7 +2,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import cv2
-adolescence_woman = 'C:/Users/User/Documents/Mi Escritorio/PROGRAMAS/Programas Python/OpenCV/adolescence.jpg'
+import os
+adolescence_woman = os.getcwd()+'/adolescence.jpg'
 imagen_fondo_negro = np.zeros(shape=(800, 900, 3), dtype=np.int)
 
 # Leyendo la imagen de la mujer

@@ -2,7 +2,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import cv2
-img_woman_ruta = 'C:/Users/User/Documents/Mi Escritorio/PROGRAMAS/Programas Python/OpenCV/woman.jpg'
+import os
+img_woman_ruta =os.getcwd()+'/woman.jpg'
 
 imagen_original = cv2.imread(img_woman_ruta);
 # Convertir la imagen que se lee como BGR a RGB de esta forma

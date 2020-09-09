@@ -1,10 +1,11 @@
 # Detectar imagenes por emparejamienteo con otra imagen
 import matplotlib.pyplot as plt
 import cv2
+import os 
+
 # Imagen de la Adolecente
-adolescence = 'C:/Users/User/Documents/Mi Escritorio/PROGRAMAS/Programas Python/OpenCV/adolescence.jpg'
-# El rostro de la adolecente
-face_adolescence = 'C:/Users/User/Documents/Mi Escritorio/PROGRAMAS/Programas Python/OpenCV/adolescence-face.jpg'
+adolescence = os.getcwd()+'/adolescence.jpg'
+face_adolescence = os.getcwd()+'/adolescence-face.jpg'
 
 # se carga la imagen de la adolecente
 imagen = cv2.imread(adolescence)

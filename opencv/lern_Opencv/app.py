@@ -40,7 +40,7 @@ def stackImages(scale,imgArray):
 def CargaImgSimple():
     # CODIGO PARA CARGAR UNA IMAGEN RAPIDA
     ruta = os.getcwd()
-    print('Package Imported, la ruta donde estmos es: {}'.format(ruta))
+    print('Package Imported, la ruta donde estamos es: {}'.format(ruta))
     # CARGAMOS LA IMAGE O LA RUTA DE LA IMAGEN
     img_ruta = str(ruta+"/woman.jpg")
     # LEEMOS LA IMAGEN

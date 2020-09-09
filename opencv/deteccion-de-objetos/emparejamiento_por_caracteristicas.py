@@ -2,10 +2,10 @@
 import cv2
 import matplotlib.pyplot as plt
 import numpy as np
-
+import os
 # Cargamos las imagenes que se utilizan
-caja_cereal = 'C:/Users/User/Documents/Mi Escritorio/PROGRAMAS/Programas Python/OpenCV/cereal.png'
-cajas_cereales = 'C:/Users/User/Documents/Mi Escritorio/PROGRAMAS/Programas Python/OpenCV/cereales.png'
+caja_cereal = os.getcwd()+'/cereal.png'
+cajas_cereales = os.getcwd()+'/cereales.png'
 
 # leemos las imagenes
 cereal = cv2.imread(caja_cereal)
@@ -59,5 +59,3 @@ plt.show()
 # Mostramos la imagen de las cajas de cereal
 # plt.imshow(cereales)
 # plt.show()
-
-

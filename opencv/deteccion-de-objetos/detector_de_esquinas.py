@@ -2,9 +2,10 @@
 import numpy as np
 import cv2
 import matplotlib.pyplot as plt
+import os
 
 # Cargamos la imgen o su ruta
-tablero = 'C:/Users/User/Documents/Mi Escritorio/PROGRAMAS/Programas Python/OpenCV/tablero-ajedrez.png'
+tablero =os.getcwd()+'/tablero-ajedrez.png'
 # Leemos la imagen
 ajedrez = cv2.imread(tablero)
 # Se convierte en escala de grises
@@ -27,8 +28,6 @@ for i in esquinas:
 # mostramos la imagen original ya con las esquinas marcadas
 plt.imshow(ajedrez)
 plt.show()
-
-
 
 # Mostramos la imgen original en escala de grises
 plt.imshow(ajedrez_gris, cmap='gray')
