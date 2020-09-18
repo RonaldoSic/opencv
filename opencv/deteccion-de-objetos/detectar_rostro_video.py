@@ -14,14 +14,24 @@ cascada_cara = cv.CascadeClassifier(caracteristicas_cara_xml)
 # cargamos las caracteristicas para que se detecten los ojo en una cara
 cascada_ojos = cv.CascadeClassifier(caracteristicas_ojos_xml)
 # color del rectangulo de las caras
+const_face = 0
 color_rectangle = (145, 255, 245)
 # color del rectangulo de las ojos
 color_rect = (254, 226, 97)
 
 # Funcion para detectar los rostros en el video
 def detectar_cara (imagen):
+    global const_face
     img_copy = imagen.copy()
-    rectangulos = cascada_cara.detectMultiScale(img_copy)
+    # img_copy = cv.cvtColor(img_copy, cv.COLOR_BGR2GRAY)
+    rectangulos = cascada_cara.detectMultiScale(img_copy, 1.3, 5)
+    if len(rectangulos) > 0:
+        const_face += 1    
+        if const_face > 10:
+            print('\t\t Rostro encontrado \t{}'.format(const_face))
+    else:
+        const_face = 0
+        print('\t No hay Rostro en el frame')
     for (x,y,w,h) in rectangulos:
         cv.rectangle(img_copy,pt1= (x,y),pt2=(x+w, y+h), color=color_rectangle, thickness=4)
     return img_copy
