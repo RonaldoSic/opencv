@@ -54,7 +54,7 @@ def CargaImgSimple():
 # CAPITULO 2 Codigo para leer video de una camara 0 es webcam de pc 1 es camara de otro lado
 def LeerWebCam():
     # CODIGO PARA CARGAR UN VIDEO RAPIDO
-    cap = cv2.VideoCapture(1)
+    cap = cv2.VideoCapture(0)
     cap.set(3, 640)  #Ancho
     cap.set(4, 480)  #Alto
     cap.set(10, 100)
@@ -451,8 +451,8 @@ def ReconocerBotellas():
     cv2.waitKey(0)
 
 
-CargaImgSimple()
-# LeerWebCam()
+# CargaImgSimple()
+LeerWebCam()
 # ImagensConProcesamiento()
 # ResizeImage()
 # DibijarEscribirEnImg()

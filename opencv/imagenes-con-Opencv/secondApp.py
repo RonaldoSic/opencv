@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import cv2
 import os
-img_woman_ruta =os.getcwd()+'/woman.jpg'
+img_woman_ruta =os.getcwd()+'/woman.    jpg'
 
 imagen_original = cv2.imread(img_woman_ruta);
 # Convertir la imagen que se lee como BGR a RGB de esta forma
@@ -25,7 +25,7 @@ print("El tamanio nuevo al darle un tamanio fijo es de {}".format(tamanio_fijo_a
 # Modificando el tamnio de la imagen a un 50% del tamnio y alto de la imagen original
 ancho_y_alto_img = 0.5
 """
-    Puede ser asi de esta mandera tambien si no son los mimsos tamanio para el alto y el ancho que se desea
+    Puede ser asi de esta mandera tambien si no son los misos tamanio para el alto y el ancho que se desea
     ancho_porcentaje = 0.5  es igual al 50%
     alto_porcentaje = 0.8   es igual al 80%
 """
